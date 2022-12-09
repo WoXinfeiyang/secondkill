@@ -26,7 +26,7 @@ import java.util.Optional;
  */
 @RestController
 public class UserController {
-
+    private static String TAG=UserController.class.getSimpleName();
     @Autowired
     private UserService userService;
     @Autowired
@@ -87,10 +87,13 @@ public class UserController {
      */
     @GetMapping("/user/check/{username}")
     public Result checkUsername(@PathVariable("username")String username){
+        System.out.println(TAG+".checkUsername...username="+username);
         if (StringUtils.isEmpty(username)){
             throw new AppRuntimeException(ResultErrEnum.INVALID_PARAM);
         }
-        if (userService.checkUsername(username) > 0){
+        int checkResult = userService.checkUsername(username);
+        System.out.println(TAG+".checkUsername...username="+username+",checkResult(>0用户名已经注册,=0可以注册)="+checkResult);
+        if ( checkResult > 0){
             return ResultUtils.success("该用户名已被注册", false);
         }
         return ResultUtils.success("可以注册", true);

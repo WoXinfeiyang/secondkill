@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.activation.MimetypesFileTypeMap;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;

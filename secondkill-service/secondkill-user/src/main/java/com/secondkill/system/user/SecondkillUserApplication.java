@@ -18,6 +18,7 @@ public class SecondkillUserApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SecondkillUserApplication.class, args);
+        System.out.println(SecondkillUserApplication.class.getSimpleName()+" 启动成功!");
     }
 
 }

@@ -45,7 +45,7 @@ spring:
         server-addr: secondkill-register:8848
 #        namespace: dev
 #        group: user
-#        ip: 127.0.0.1
+        ip: secondkill-register
 
 
   redis:

@@ -9,6 +9,21 @@
     <artifactId>secondkill</artifactId>
     <version>1.1.0</version>
 
+    <!--TODO 添加阿里云maven仓库,参考链接:https://blog.csdn.net/weixin_42665676/article/details/112861614-->
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alimaven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <properties>
         <secondkill.version>1.1.0</secondkill.version>
         <skipTests>true</skipTests>
